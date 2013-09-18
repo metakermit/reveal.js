@@ -30,7 +30,11 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
-			main: {
+			dist: {
+			//options: { // requires sass 3.3
+			//sourcemap: true
+			//	},
+
 				files: {
 					'css/theme/default.css': 'css/theme/source/default.scss',
 					'css/theme/beige.css': 'css/theme/source/beige.scss',
@@ -39,7 +43,8 @@ module.exports = function(grunt) {
 					'css/theme/simple.css': 'css/theme/source/simple.scss',
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
-					'css/theme/solarized.css': 'css/theme/source/solarized.scss'
+					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
+                                        'css/theme/halistic.css': 'css/theme/source/halistic.scss'
 				}
 			}
 		},
@@ -93,7 +98,10 @@ module.exports = function(grunt) {
 			},
 			theme: {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
-				tasks: 'themes'
+				tasks: 'themes',
+			        options: {
+                                    livereload: true,
+				},
 			}
 		}
 

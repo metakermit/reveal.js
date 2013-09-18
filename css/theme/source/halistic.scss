@@ -1,0 +1,81 @@
+/**
+ * Halistic theme for reveal.js.
+ *
+ * Copyright (C) 2013- Dražen Lučanin, http://kermit.epska.org
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(http://fonts.googleapis.com/css?family=Rationale|Roboto+Slab:300,100,700,400&subset=latin,latin-ext);
+
+// -------------------------------------------------------
+// Override theme settings (see ../template/settings.scss)
+// -------------------------------------------------------
+
+// palette
+$dark_purple: #4B3344;
+
+
+// Primary/body text
+$mainFont: 'Roboto Slab', serif;
+$mainColor: black;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: 'Rationale', Impact, sans-serif;
+$headingColor: $dark_purple;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: $dark_purple;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// -------------------------------------------------------
+
+
+/*Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
+}*/
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Override CSS --------------------------------
+
+
+/* BACKGROUND*/
+
+body {
+    background: white;
+    background: white url('img/haley-texture-gray.png') repeat;
+}
+
+.reveal {
+  font-weight: 300;
+
+  h1 {
+    background-color: $dark_purple;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+
+  h2 { font: 100 2em 'Roboto Slab', sans-serif; margin: 0; color: #4A3245; }
+}
