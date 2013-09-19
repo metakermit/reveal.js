@@ -83,11 +83,13 @@ body {
   h4 { font-size: 1em; font-weight: 200; }
 
 
-  p { text-align: justify; color: black; font-weight: 300;
+  p { text-align: left; color: black; font-weight: 300;
       small { text-align: center; display: block; }
   }
 
-  p, li, code { font-weight: 300; }
+  blockquote { box-shadow: none; p { text-align: center;  } }
+
+  p, li, code, center { font-weight: 300; }
   strong { font-weight: 400; }
 
   ul, ol {
@@ -95,6 +97,10 @@ body {
     margin: 0 0 0 2em;
     li { font-weight: 300; }
   }
+
+    /* selected text */
+    ::-moz-selection { background: #B175B9; color: #fff; text-shadow: none; }
+    ::selection { background: #B175B9; color: #fff; text-shadow: none; }
 
   /*TODO: globally set font-weight - find where that is */
 
@@ -105,6 +111,7 @@ body {
     -moz-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
     -webkit-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
     box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    display: block; margin: 1em auto 0;
   }
 
 }
