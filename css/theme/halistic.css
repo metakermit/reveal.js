@@ -139,7 +139,8 @@ body {
   background: white url("img/haley-texture-gray.png") repeat; }
 
 .reveal {
-  font-weight: 300; }
+  font-weight: 300;
+  /*TODO: globally set font-weight - find where that is */ }
   .reveal h1 {
     background-color: #4b3344;
     color: transparent;
@@ -147,7 +148,38 @@ body {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text; }
-  .reveal h2 {
+  .reveal h2, .reveal h3, .reveal h4 {
     font: 100 2em 'Roboto Slab', sans-serif;
-    margin: 0;
-    color: #4A3245; }
+    color: #4A3245;
+    text-shadow: none; }
+  .reveal h3 {
+    font-size: 1.5em; }
+  .reveal h4 {
+    font-size: 1em;
+    font-weight: 200; }
+  .reveal p {
+    text-align: justify;
+    color: black;
+    font-weight: 300; }
+    .reveal p small {
+      text-align: center;
+      display: block; }
+  .reveal p, .reveal li, .reveal code {
+    font-weight: 300; }
+  .reveal strong {
+    font-weight: 400; }
+  .reveal ul, .reveal ol {
+    display: block;
+    margin: 0 0 0 2em; }
+    .reveal ul li, .reveal ol li {
+      font-weight: 300; }
+  .reveal section img {
+    max-width: 90%;
+    /*display: block; margin: 2em auto 2em;*/
+    /* frame */
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.2em;
+    -moz-box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.2); }

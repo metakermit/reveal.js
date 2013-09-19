@@ -66,6 +66,7 @@ body {
 }
 
 .reveal {
+
   font-weight: 300;
 
   h1 {
@@ -77,5 +78,33 @@ body {
     background-clip: text;
   }
 
-  h2 { font: 100 2em 'Roboto Slab', sans-serif; margin: 0; color: #4A3245; }
+  h2, h3, h4 {font: 100 2em 'Roboto Slab', sans-serif; color: #4A3245;  text-shadow: none;}
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1em; font-weight: 200; }
+
+
+  p { text-align: justify; color: black; font-weight: 300;
+      small { text-align: center; display: block; }
+  }
+
+  p, li, code { font-weight: 300; }
+  strong { font-weight: 400; }
+
+  ul, ol {
+    display: block;
+    margin: 0 0 0 2em;
+    li { font-weight: 300; }
+  }
+
+  /*TODO: globally set font-weight - find where that is */
+
+  section img { max-width: 90%;
+    /*display: block; margin: 2em auto 2em;*/
+    /* frame */
+    background: #fff; border: 1px solid #e0e0e0; border-radius: 0.2em;
+    -moz-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+  }
+
 }
