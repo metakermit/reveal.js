@@ -1,10 +1,39 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Rationale|Roboto+Slab:300,100,700,400&subset=latin,latin-ext);
 /**
  * Halistic theme for reveal.js.
  *
  * Copyright (C) 2013- Dražen Lučanin, http://kermit.epska.org
  */
+@font-face {
+  font-family: 'Rationale';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Rationale"), local("Rationale-Regular"), url("font/Rationale.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Slab Thin"), local("RobotoSlab-Thin"), url("font/Roboto Slab 100.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url("font/Roboto Slab 300.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url("font/Roboto Slab 400.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url("font/Roboto Slab 700.woff") format("woff"); }
+
 /*Background generator
 @mixin bodyBackground() {
 	@include radial-gradient( rgba(28,30,32,1), rgba(85,90,95,1) );
