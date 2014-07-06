@@ -36,6 +36,7 @@ module.exports = function(grunt) {
 			//	},
 
 				files: {
+					'css/theme/duraluminreveal.css': 'css/theme/source/duraluminreveal.scss',
 					'css/theme/default.css': 'css/theme/source/default.scss',
 					'css/theme/beige.css': 'css/theme/source/beige.scss',
 					'css/theme/night.css': 'css/theme/source/night.scss',
@@ -100,8 +101,8 @@ module.exports = function(grunt) {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
 				tasks: 'themes',
 			        options: {
-                                    livereload: true,
-				},
+					livereload: true
+				}
 			}
 		}
 

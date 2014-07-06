@@ -1,0 +1,148 @@
+/**
+ * Duralumin theme for reveal.js.
+ *
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include the main Duralumin settings
+
+@import "../../../bower_components/duralumin/app/styles/dural-variables";
+
+// A couple of path shortcuts
+
+$duralumin-path: "../../bower_components/duralumin";
+$duralumin-fonts: "#{$duralumin-path}/app/styles/fonts";
+
+// Include theme-specific fonts
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('EB Garamond 12 Regular'), url(#{$duralumin-fonts}/ebgaramond/400.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  src: local('EB Garamond 12 Italic'), url(#{$duralumin-fonts}/ebgaramond/400i.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), url(#{$duralumin-fonts}/opensans/400.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), url(#{$duralumin-fonts}/opensans/400i.woff) format('woff')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), url(#{$duralumin-fonts}/opensans/700.woff) format('woff')
+}
+
+// -------------------------------------------------------
+// Override theme settings (see ../template/settings.scss)
+// -------------------------------------------------------
+
+$backgroundColor:  $duralumin-grey;
+
+
+// Primary/body text
+$mainFont: $duralumin-font-sans;
+$mainColor: $duralumin-black;
+
+// Headings
+$headingMargin: 0 0 20px 0;
+$headingFont: $duralumin-font-serif;
+$headingColor: $duralumin-orange;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+//$headingTextTransform: uppercase;
+$headingTextTransform: none;
+//$headingTextShadow: 0px 0px 6px rgba(0,0,0,0.2);
+$headingTextShadow: none;
+$heading1TextShadow: $headingTextShadow;
+
+// Links and actions
+$linkColor: $duralumin-black;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// -------------------------------------------------------
+
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Override CSS --------------------------------
+
+
+/* BACKGROUND*/
+
+body {
+  background: url('#{$duralumin-path}/app/images/logo-watermark.png') no-repeat -10% 110% / auto 34%;
+}
+
+.reveal {
+
+  font-weight: 300;
+
+  h1 {
+
+  }
+
+  //h2, h3, h4 {font: 100 2em 'Roboto Slab', sans-serif; color: #4A3245;  text-shadow: none;}
+  h3 { font-size: 1.5em; }
+  h4 { font-size: 1em; font-weight: 200; }
+
+
+  p { text-align: left; color: black; font-weight: 300;
+      small { text-align: center; display: block; }
+  }
+
+  blockquote { box-shadow: none; p { text-align: center;  } }
+
+  p, li, code, center { font-weight: 300; }
+  strong { font-weight: 400; }
+
+  ul, ol {
+    display: block;
+    margin: 0 0 0 2em;
+    li { font-weight: 300; }
+  }
+
+    /* selected text */
+    ::-moz-selection { background: #B175B9; color: #fff; text-shadow: none; }
+    ::selection { background: #B175B9; color: #fff; text-shadow: none; }
+
+  /*TODO: globally set font-weight - find where that is */
+
+  section img { max-width: 90%;
+    /*display: block; margin: 2em auto 2em;*/
+    /* frame */
+    background: #fff; border: 1px solid #e0e0e0; border-radius: 0.2em;
+    -moz-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+    display: block; margin: 1em auto 0;
+  }
+
+}
